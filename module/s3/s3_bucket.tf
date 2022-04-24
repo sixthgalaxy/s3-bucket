@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "versioning_bucket" {
   ########### the following count works#################
   #count = "${var.environment == "prod" ? 1 : 0 }"
  
-  bucket = "sixth-my-versioning-bucket"
+  bucket = var.bucket-name
   acl    = "private"
 
   versioning {

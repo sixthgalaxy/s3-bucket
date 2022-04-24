@@ -3,3 +3,7 @@ variable "environment" {
   default = "prod"
 }
 
+variable "bucket-name" {
+  type    = string
+  default = "sixth-my-versioning-bucket-april-24"
+}
