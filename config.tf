@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "sixth-tf-dev-s3"
+    bucket         = "sixth-dev-tf-backend"
     key            = "env/dev/s3.tfstate"
     region         = "eu-west-1"
     dynamodb_table = "dev-s3-config-statelock"
