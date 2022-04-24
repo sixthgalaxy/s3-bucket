@@ -1,5 +1,5 @@
-variable "environment"  {
-   type = string
-   default = "prod"
+variable "environment" {
+  type    = string
+  default = "prod"
 }
 
