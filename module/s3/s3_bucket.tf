@@ -22,6 +22,16 @@ resource "aws_s3_bucket" "versioning_bucket" {
   }
 }
 
-# output "bucket1-name" {
-#   value = aws_s3_bucket.versioning_bucket.id
-# }
+# S3 bucket encrytpiong rule
+resource "aws_s3_bucket_server_side_encryption_configuration" "enable-sse" {
+  bucket = aws_s3_bucket.versioning_bucket.bucket
+
+  rule {
+    apply_server_side_encryption_by_default {
+      #kms_master_key_id = aws_kms_key.mykey.arn
+      #sse_algorithm     = "aws:kms"
+      sse_algorithm     = "AES256"
+      
+    }
+  }
+}

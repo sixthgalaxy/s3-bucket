@@ -12,8 +12,8 @@ terraform {
     dynamodb_table = "dev-s3-config-statelock"
   }
 
-
 }
+# the partion key name of the DynamoDB should be LockID
 
 # Configure the AWS Provider
 provider "aws" {
