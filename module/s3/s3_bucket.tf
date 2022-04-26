@@ -24,7 +24,7 @@ resource "aws_s3_bucket" "versioning_bucket" {
 
 # S3 bucket encrytpiong rule
 resource "aws_s3_bucket_server_side_encryption_configuration" "enable-sse" {
-  bucket = aws_s3_bucket.versioning_bucket.bucket
+  bucket = aws_s3_bucket.versioning_bucket[0].bucket
 
   rule {
     apply_server_side_encryption_by_default {
