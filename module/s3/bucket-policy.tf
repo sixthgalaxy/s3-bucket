@@ -24,11 +24,21 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
       variable = "aws:SecureTransport"
 
       values = [
-        "false"
-        
-      
+        "false"    
       ]
     }
+      
+   condition {
+    test     = "StringLike"
+      variable = "s3:prefix"
+
+      values = [
+        "",
+        "home/",
+        "home/*",
+      ]
+    }
+
 
 
 
