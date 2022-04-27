@@ -5,5 +5,5 @@ variable "environment" {
 
 variable "bucket-name" {
   type    = string
-  default = "sixth-my-versioning-bucket-friday1"
+  default = "sixth-my-versioning-bucket-friday2"
 }
