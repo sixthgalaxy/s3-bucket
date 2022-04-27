@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "aws_logs_bucket" {
-  bucket = aws_s3_bucket.versioning_bucket[0].id
+  bucket = var.bucket-name
+  # bucket = aws_s3_bucket.versioning_bucket[0].id
   acl    = "private"
   versioning {
     enabled = true
