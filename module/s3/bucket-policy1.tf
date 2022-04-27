@@ -16,6 +16,11 @@ resource "aws_s3_bucket" "aws_logs_bucket" {
       ],
       "Effect": "Allow",
       "Resource": "arn:aws:s3:::${var.bucket-name}/*",
+       "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      },
       "Principal": {
         "AWS": [
           "arn:aws:iam::607281769355:root"
