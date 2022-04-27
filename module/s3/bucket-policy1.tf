@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "aws_logs_bucket" {
       "Resource": "arn:aws:s3:::${var.bucket_name}/*",
       "Principal": {
         "AWS": [
-          "${data.aws_elb_service_account.main.arn}"
+          "arn:aws:iam::607281769355:root"
         ]
       }
     }
